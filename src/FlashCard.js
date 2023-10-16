@@ -169,7 +169,7 @@ const styles = {
     borderRadius: '10px',
     color: 'white',
     padding: '1px 5px',
-    fontSize: '10px',
+    fontSize: '14px',
     position: 'absolute', 
     top: '-4px',
     right: '-4px',
