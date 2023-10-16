@@ -87,8 +87,12 @@ function FlashCard({ words }) {
                   ...styles.gridItem,
                   ...(scored ? {} : styles.unscored), // Apply the unscored style conditionally
                 }}
-              >
-                {word} {scored && `: ${wordCounts[word]}`}  {/* Display the score if available */}
+              ><span 
+                style={{
+                  ...(scored? styles.gridItemBadge : {})
+                }}
+                >{scored && `${wordCounts[word]}`}</span>{/* Display the score if available */}
+                {word}
               </div>
             );
           })}
@@ -150,13 +154,24 @@ const styles = {
     marginTop: '20px', // space at the top
   },
   gridItem: {
+    position :'relative',
     padding: '10px',
     textAlign: 'center',
     borderRadius: '5px',
     backgroundColor: '#FFEFB7', // light yellow background for visibility
   },
   unscored: {
-    opacity: 0.5, // reduces the opacity for words without scores
+    opacity: 0.2, // reduces the opacity for words without scores
+  },
+  gridItemBadge: {
+    backgroundColor: '#26b8398a',
+    borderRadius: '10px',
+    color: 'white',
+    padding: '1px 5px',
+    fontSize: '10px',
+    position: 'absolute', 
+    top: '-4px',
+    right: '-4px',
   },
 };
 
