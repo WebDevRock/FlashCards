@@ -123,6 +123,7 @@ const styles = {
     borderRadius: "15px", // Rounded edges
     padding: "20px",
     backgroundColor: "#FFEFB7", // Light yellow background
+    minWidth: "100px",
   },
   button: {
     padding: "10px 20px",
